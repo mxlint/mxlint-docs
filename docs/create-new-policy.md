@@ -1,11 +1,11 @@
-## Create new policy
+# Create new policy
 
-### Rego Introduction
+## Rego Introduction
 
 Policies are expressed with the help of the powerful OPA Rego language. Rego is a declarative language that is purpose-built for expressing policies over complex hierarchical data structures. Rego is designed to be easy to read and write, even for non-programmers. Rego is a safe language that is decidable and has a small trusted computing base. Rego is also designed to be easy to integrate with other systems.
 
 
-### Policy rule
+## Policy rule
 
 To create a new policy, you need to create a new Rego file in the `policies` directory. The file name should be in the format `XXX_YYY.rego` where `XXX` is the policy number and `YYY` is the policy name. For example, `001_0001_anonymous_disabled.rego`.
 

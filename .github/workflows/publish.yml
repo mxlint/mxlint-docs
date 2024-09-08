@@ -13,11 +13,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Download rules
+        run: |
+          curl -L https://github.com/mxlint/mxlint-rules/archive/refs/heads/main.zip -o rules.zip
+          unzip rules.zip
+          mv rules-main/rules .
+          rm -rf rules-main
+
       - name: Build
         run: |
           git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY -b gh-pages public
           pip install -r requirements.txt
-          python scripts/generate-policies-docs.py
+          python scripts/generate-rule-docs.py
           mkdocs build --verbose --clean
 
       - name: Publish
