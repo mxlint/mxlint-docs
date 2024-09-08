@@ -17,8 +17,8 @@ jobs:
         run: |
           curl -L https://github.com/mxlint/mxlint-rules/archive/refs/heads/main.zip -o rules.zip
           unzip rules.zip
-          mv rules-main/rules .
-          rm -rf rules-main
+          mv mxlint-rules-main/rules .
+          rm -rf mxlint-rules-main
 
       - name: Build
         run: |
