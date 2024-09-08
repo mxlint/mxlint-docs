@@ -22,7 +22,7 @@ jobs:
 
       - name: Build
         run: |
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY -b gh-pages public
+          git clone https://x-access-token:${{ secrets.PAT }}@github.com/$GITHUB_REPOSITORY -b gh-pages public
           pip install -r requirements.txt
           python scripts/generate-rule-docs.py
           mkdocs build --verbose --clean
