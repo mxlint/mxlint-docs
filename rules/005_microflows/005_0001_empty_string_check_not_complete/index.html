@@ -1016,9 +1016,6 @@
 <h1 id="empty-string-check-not-complete">Empty String check not complete</h1>
 <p>Always check a string for empty based on != empty and != "". The first one equals database NULL value, the latter one indicates a truncated string.</p>
 <h2 id="metadata">Metadata</h2>
-<h2 id="description">Description</h2>
-<p>Technically, there is a difference between empty and "". Make sure to check them both.</p>
-<h2 id="remediation">Remediation</h2>
 <div class="highlight"><pre><span></span><code><span class="nt">authors</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Xiwen Cheng &lt;x@cinaq.com&gt;</span>
 <span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Error</span>
@@ -1028,6 +1025,10 @@
 <span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">package</span>
 <span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MEDIUM</span>
 </code></pre></div>
+<h2 id="description">Description</h2>
+<p>Technically, there is a difference between empty and "". Make sure to check them both.</p>
+<h2 id="remediation">Remediation</h2>
+<p>Always check a string for empty based on != empty and != "". The first one equals database NULL value, the latter one indicates a truncated string.</p>
 <h2 id="test-cases">Test cases</h2>
 <div class="highlight"><pre><span></span><code>package app.mendix.microflows.empty_string_check_not_complete
 import rego.v1

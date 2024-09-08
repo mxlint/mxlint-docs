@@ -1018,9 +1018,6 @@
 <h1 id="no-more-that-35-attributes-in-an-entity">No more that 35 attributes in an entity</h1>
 <p>Normalize your datamodel. Split your object into multiple objects. If the attributes really belong to each other in a one-to-one relation, just draw a one-to-one relation between the objects.</p>
 <h2 id="metadata">Metadata</h2>
-<h2 id="description">Description</h2>
-<p>The bigger the entities, the slower your application will become when handling the data. This is because Mendix is using SELECT * queries a lot and will retrieve a lot of unnecessary data.</p>
-<h2 id="remediation">Remediation</h2>
 <div class="highlight"><pre><span></span><code><span class="nt">authors</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Xiwen Cheng &lt;x@cinaq.com&gt;</span>
 <span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Maintainability</span>
@@ -1030,6 +1027,10 @@
 <span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">package</span>
 <span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MEDIUM</span>
 </code></pre></div>
+<h2 id="description">Description</h2>
+<p>The bigger the entities, the slower your application will become when handling the data. This is because Mendix is using SELECT * queries a lot and will retrieve a lot of unnecessary data.</p>
+<h2 id="remediation">Remediation</h2>
+<p>Normalize your datamodel. Split your object into multiple objects. If the attributes really belong to each other in a one-to-one relation, just draw a one-to-one relation between the objects.</p>
 <h2 id="test-cases">Test cases</h2>
 <div class="highlight"><pre><span></span><code>package app.mendix.domain_model.number_of_attributes
 import rego.v1

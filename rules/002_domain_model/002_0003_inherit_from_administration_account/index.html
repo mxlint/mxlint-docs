@@ -1018,9 +1018,6 @@
 <h1 id="inherit-from-administrationaccount">Inherit from Administration.Account</h1>
 <p>Inherit from system.user instead or adapt Administration.Account so it fits your needs.</p>
 <h2 id="metadata">Metadata</h2>
-<h2 id="description">Description</h2>
-<p>There is no need to inherit from administration.account. Administration.account may simply be extended, this is not a system module. Avoid unnecessary inheritance as this has a negative effect on performance.</p>
-<h2 id="remediation">Remediation</h2>
 <div class="highlight"><pre><span></span><code><span class="nt">authors</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Xiwen Cheng &lt;x@cinaq.com&gt;</span>
 <span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Performance</span>
@@ -1030,6 +1027,10 @@
 <span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">package</span>
 <span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MEDIUM</span>
 </code></pre></div>
+<h2 id="description">Description</h2>
+<p>There is no need to inherit from administration.account. Administration.account may simply be extended, this is not a system module. Avoid unnecessary inheritance as this has a negative effect on performance.</p>
+<h2 id="remediation">Remediation</h2>
+<p>Inherit from system.user instead or adapt Administration.Account so it fits your needs.</p>
 <h2 id="test-cases">Test cases</h2>
 <div class="highlight"><pre><span></span><code>package app.mendix.domain_model.inherit_from_administration_account
 import rego.v1

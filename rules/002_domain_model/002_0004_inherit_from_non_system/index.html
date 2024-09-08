@@ -1018,9 +1018,6 @@
 <h1 id="inherit-from-non-system-module-is-discouraged">Inherit from non System module is discouraged</h1>
 <p>Instead of inheritance, just use separate objects which are associated to the main object. As an alternative, you can add the child’s attributes to the super entity and add an ObjectType enumeration.</p>
 <h2 id="metadata">Metadata</h2>
-<h2 id="description">Description</h2>
-<p>Inheritance, except from system module, is strongly discouraged because of the negative performance side effects.</p>
-<h2 id="remediation">Remediation</h2>
 <div class="highlight"><pre><span></span><code><span class="nt">authors</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Xiwen Cheng &lt;x@cinaq.com&gt;</span>
 <span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Performance</span>
@@ -1030,6 +1027,10 @@
 <span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">package</span>
 <span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MEDIUM</span>
 </code></pre></div>
+<h2 id="description">Description</h2>
+<p>Inheritance, except from system module, is strongly discouraged because of the negative performance side effects.</p>
+<h2 id="remediation">Remediation</h2>
+<p>Instead of inheritance, just use separate objects which are associated to the main object. As an alternative, you can add the child’s attributes to the super entity and add an ObjectType enumeration.</p>
 <h2 id="test-cases">Test cases</h2>
 <div class="highlight"><pre><span></span><code>package app.mendix.domain_model.inherit_from_non_system
 import rego.v1
