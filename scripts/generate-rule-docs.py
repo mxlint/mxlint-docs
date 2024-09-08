@@ -22,13 +22,13 @@ import yaml
 #  input: "*/DomainModels$DomainModel.yaml"
 """
 
-def parse(policy_file: str):
+def parse(rule_file: str):
     """
-    Parse the policy.
+    Parse the rule file.
     """
     metadata_lines = []
 
-    with open(policy_file, "r") as f:
+    with open(rule_file, "r") as f:
         for line in f.readlines():
             if line.startswith("# METADATA"):
                 continue
@@ -41,13 +41,13 @@ def parse(policy_file: str):
     metadata = yaml.load(raw_yaml, Loader=yaml.SafeLoader)
     return metadata
 
-def generate_policies_docs(policies_dir: str, output_dir: str):
+def generate_rules_docs(rules_dir: str, output_dir: str):
     """
-    Generate the policies documentation from the policies directory.
+    Generate the rules documentation from the rules directory.
     """
-    for policy in os.listdir(policies_dir):
-        out_dir = os.path.join(output_dir, policy)
-        in_dir = os.path.join(policies_dir, policy)
+    for rule in os.listdir(rules_dir):
+        out_dir = os.path.join(output_dir, rule)
+        in_dir = os.path.join(rules_dir, rule)
         os.makedirs(out_dir, exist_ok=True)
 
         if os.path.isdir(in_dir):
@@ -55,13 +55,13 @@ def generate_policies_docs(policies_dir: str, output_dir: str):
                 if file.endswith(".rego") and not file.endswith("_test.rego"):
                     in_file = os.path.join(in_dir, file)
                     out_file = os.path.join(out_dir, file.replace(".rego", ".md"))
-                    generate_policy_docs(in_file, out_file)
+                    generate_rule_docs(in_file, out_file)
 
-def get_test_file(policy_file: str):
+def get_test_file(rule_file: str):
     """
-    Get the test file for the policy.
+    Get the test file for the rule.
     """
-    test_file = policy_file.replace(".rego", "_test.rego")
+    test_file = rule_file.replace(".rego", "_test.rego")
     if not os.path.exists(test_file):
         return "# No test file found"
 
@@ -69,16 +69,16 @@ def get_test_file(policy_file: str):
         body = f.read()
     return body
 
-def generate_policy_docs(policy_file: str, output_file: str):
-    policy = parse(policy_file)
+def generate_rule_docs(rule_file: str, output_file: str):
+    rule = parse(rule_file)
 
-    title = policy.get("title", "Untitled")
-    description = policy.get("description", "No description provided")
-    remediation = policy.get("remediation", "No remediation provided")
-    del policy["title"]
-    del policy["description"]
-    del policy["remediation"]
-    del policy["custom"]
+    title = rule.get("title", "Untitled")
+    description = rule.get("description", "No description provided")
+    remediation = rule.get("remediation", "No remediation provided")
+    del rule["title"]
+    del rule["description"]
+    del rule["remediation"]
+    del rule["custom"]
 
     with open(output_file, "w") as f:
         f.write(f"# {title}\n")
@@ -88,19 +88,19 @@ def generate_policy_docs(policy_file: str, output_file: str):
         f.write(f"{description}\n")
         f.write(f"## Remediation\n")
         f.write(f"```yaml\n")
-        f.write(f"{yaml.dump(policy)}\n")
+        f.write(f"{yaml.dump(rule)}\n")
         f.write(f"```\n")
         f.write(f"## Test cases\n")
         f.write(f"```rego\n")
-        f.write(f"{get_test_file(policy_file)}\n")
+        f.write(f"{get_test_file(rule_file)}\n")
         f.write(f"```\n")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-r", "--rules", type=str, default="rules", help="The directory containing the policy definitions")
-    parser.add_argument("-o", "--output", type=str, default="docs/rules", help="The directory to output the policies documentation")
+    parser.add_argument("-r", "--rules", type=str, default="rules", help="The directory containing the rule definitions")
+    parser.add_argument("-o", "--output", type=str, default="docs/rules", help="The directory to output the rules documentation")
     args = parser.parse_args()
 
-    generate_policies_docs(args.policies, args.output)
+    generate_rules_docs(args.rules, args.output)
 
