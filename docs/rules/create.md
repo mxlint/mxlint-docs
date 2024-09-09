@@ -1,4 +1,4 @@
-# Create new policy
+# Create Rule
 
 ## Rego Introduction
 

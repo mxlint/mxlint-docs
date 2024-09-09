@@ -1,7 +1,7 @@
 site_name: MxLint
 theme:
   name: 'material'
-  logo: assets/logo.png
+  logo: assets/mxlint-logo.png
 #  custom_dir: overrides
   palette:
     # Palette toggle for automatic mode
@@ -35,7 +35,7 @@ theme:
     - navigation.instant.progress
     - navigation.tracking
     # - navigation.sections
-    # - navigation.expand
+    - navigation.expand
     # - toc.integrate
     - header.autohide
 extra:
