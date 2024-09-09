@@ -1,7 +1,11 @@
 site_name: MxLint
+repo_url: https://github.com/mxlint/mxlint-docs
+repo_name: mxlint/mxlint-docs
 theme:
   name: 'material'
   logo: assets/mxlint-logo.png
+  icon:
+    repo: fontawesome/brands/github
 #  custom_dir: overrides
   palette:
     # Palette toggle for automatic mode
