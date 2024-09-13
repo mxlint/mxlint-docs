@@ -16,8 +16,8 @@ theme:
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      primary: blue
-      accent: blue grey
+      primary: light blue
+      accent: teal
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -25,7 +25,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue grey
+      primary: black
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
@@ -39,9 +39,11 @@ theme:
     - navigation.instant.progress
     - navigation.tracking
     # - navigation.sections
-    - navigation.expand
+    # - navigation.expand
     # - toc.integrate
     - header.autohide
+    - content.code.copy
+    - content.code.select
 extra:
   homepage: /
 plugins:
@@ -49,6 +51,12 @@ plugins:
   - awesome-pages
 copyright: Copyright &copy; 2022 - 2024 <a href="https://cinaq.com">CINAQ.com</a>
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

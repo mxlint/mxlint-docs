@@ -1,6 +1,9 @@
 nav:
-    - README.md
+    - index.md
     - quickstart.md
     - ...
+    - Mendix Documents
+    - Rules
     - terminologies.md
+    - code-of-conduct.md
     - about.md

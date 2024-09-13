@@ -2,7 +2,7 @@
 
 ## Rego Introduction
 
-Policies are expressed with the help of the powerful OPA Rego language. Rego is a declarative language that is purpose-built for expressing policies over complex hierarchical data structures. Rego is designed to be easy to read and write, even for non-programmers. Rego is a safe language that is decidable and has a small trusted computing base. Rego is also designed to be easy to integrate with other systems.
+Rules are expressed with the help of the powerful OPA Rego language. Rego is a declarative language that is purpose-built for expressing policies over complex hierarchical data structures. Rego is designed to be easy to read and write, even for non-programmers. Rego is a safe language that is decidable and has a small trusted computing base. Rego is also designed to be easy to integrate with other systems.
 
 
 ## Policy rule
@@ -11,7 +11,7 @@ To create a new policy, you need to create a new Rego file in the `policies` dir
 
 The policy file should contain the following structure:
 
-```rego
+```rego title="001_0001_anonymous_disabled.rego"
 # METADATA
 # scope: package
 # title: Business apps must always require login
@@ -71,7 +71,7 @@ test_no_allow if {
 To test your policy, run the following command:
 
 ```bash
-$ ./run-policy-tests.sh              
+$ ./run-policy-tests.sh
 policies/001_project_settings/001_0001_anonymous_disabled_test.rego:
 data.app.mendix.project_settings.anonymous_disabled.test_allow: PASS (3.031209ms)
 data.app.mendix.project_settings.anonymous_disabled.test_no_allow: PASS (413.375µs)

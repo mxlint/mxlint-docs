@@ -1,14 +1,12 @@
-# Introduction
+# Home
 
-MxLint (Formerly Mendix-CLI) is a set of tools to help you build high quality Mendix apps. This is inspired by the success of projects like [SonarQube](https://www.sonarqube.org/) and other linting systems which provide a way to enforce best practices and guidelines in your code.
+MxLint (Formerly Mendix-CLI) is a set of tools to help you build high quality Mendix apps. This is inspired by the success of projects like [PyLint](https://www.pylint.org/) and other linting systems which provide a way to enforce code standards, best practices and guidelines in your code.
 
 ## Mission
 
 - Become the standard for linting Mendix apps.
 - Provide a way to enforce best practices and guidelines in your code.
 - Provide a way to share knowledge and experience between developers.
-- Provide a way to learn from each other.
-- Provide a way to contribute to the Mendix community.
 
 ## Ecosystem
 
@@ -16,7 +14,7 @@ Mxlint is a collection of tools and projects to help you build high quality Mend
 
 - [MxLint CLI](https://github.com/mxlint/mxlint-cli): The main tool of the MxLint ecosystem. It is used to lint your Mendix project. Can be used directly as CLI tool or as part of a CI/CD pipeline.
 - [MxLint Extension](https://github.com/mxlint/mxlint-extension): An extension for Mendix Studio Pro to help you lint your Mendix project during development.
-- [MxLint Rules](https://github.com/mxlint/mxlint-rules): A place to share your rules with the community.
+- [MxLint Rules](https://github.com/mxlint/mxlint-rules): A place to find and share your rules with the community.
 - [MxLint Docs](https://github.com/mxlint/mxlint-docs): This documentation you are reading right now. It also extracts documentation from the rules to provide you with a better experience in a single place.
 
 ## Philosophy
