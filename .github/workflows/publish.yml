@@ -17,14 +17,15 @@ jobs:
         run: |
           curl -L https://github.com/mxlint/mxlint-rules/archive/refs/heads/main.zip -o rules.zip
           unzip rules.zip
-          mv mxlint-rules-main/rules/* docs/Rules/
+          mv mxlint-rules-main/rules tmp-rules
           rm -rf mxlint-rules-main
 
       - name: Build
         run: |
           git clone https://x-access-token:${{ secrets.PAT }}@github.com/$GITHUB_REPOSITORY -b gh-pages public
           pip install -r requirements.txt
-          python scripts/generate-rule-docs.py
+          python scripts/generate-rule-docs.py -r tmp-rules -o docs/Rules
+          rm -rf tmp-rules
           mkdocs build --verbose --clean
 
       - name: Publish
