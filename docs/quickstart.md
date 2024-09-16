@@ -1,4 +1,3 @@
 # Quickstart
 
-## Installation
-
+- [Mendix Studio Pro Extension](../Mendix Studio Pro extension/installation)
