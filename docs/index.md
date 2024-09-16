@@ -2,6 +2,12 @@
 
 MxLint (Formerly Mendix-CLI) is a set of tools to help you build high quality Mendix apps. This is inspired by the success of projects like [PyLint](https://www.pylint.org/) and other linting systems which provide a way to enforce code standards, best practices and guidelines in your code.
 
+<video width="100%" controls>
+  <source src="assets/videos/mxlint-extension-2024-09-12-responsive.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 ## Mission
 
 - Become the standard for linting Mendix apps.
@@ -16,6 +22,10 @@ Mxlint is a collection of tools and projects to help you build high quality Mend
 - [MxLint Extension](https://github.com/mxlint/mxlint-extension): An extension for Mendix Studio Pro to help you lint your Mendix project during development.
 - [MxLint Rules](https://github.com/mxlint/mxlint-rules): A place to find and share your rules with the community.
 - [MxLint Docs](https://github.com/mxlint/mxlint-docs): This documentation you are reading right now. It also extracts documentation from the rules to provide you with a better experience in a single place.
+
+## Bugs and Contribution
+
+We welcome all to report bugs or even better contribute to MxLint. This can be done creating issues or Pull request towards the repositories listed above.
 
 ## Philosophy
 
