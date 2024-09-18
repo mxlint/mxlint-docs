@@ -1,6 +1,6 @@
 # Introduction
 
-While the [Mendix Studio Pro extension](../Mendix%20Studio%20Pro%20extension/index.md) enables you to get immediate feedback on your project quality as a developer, MxLint can also be used as governance tool.
+While the [Mendix Studio Pro extension](../mendix-studio-pro-extension/index.md) enables you to get immediate feedback on your project quality as a developer, MxLint can also be used as governance tool.
 
 This can be achieved by for instance adding MxLint to your (existing) Continuous Integration pipelines. You can also choose to scan against a more extensive set of rules than locally on developer machines.
 
