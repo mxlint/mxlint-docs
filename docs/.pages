@@ -1,9 +1,13 @@
 nav:
     - index.md
     - quickstart.md
+    - use-cases.md
+    - features.md
     - ...
-    - Mendix Documents
-    - Rules
+    - mendix-studio-pro-extension
+    - pipeline-integration
+    - mendix-documents
+    - rules
     - terminologies.md
     - code-of-conduct.md
     - about.md

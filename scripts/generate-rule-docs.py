@@ -34,11 +34,15 @@ def parse(rule_file: str):
                 continue
             clean_line = line.replace("# ", "", 1).strip()
             if line.startswith("#"):
+                # fix rulenumber
+                if clean_line.startswith("rulenumber: ") and not clean_line.endswith("\""):
+                    clean_line = clean_line.replace(": ", ": \"", 1) + "\""
                 metadata_lines.append(clean_line)
             else:
                 break
     raw_yaml = "\n".join(metadata_lines)
     metadata = yaml.load(raw_yaml, Loader=yaml.SafeLoader)
+    print(metadata)
     return metadata
 
 def generate_rules_docs(rules_dir: str, output_dir: str):
@@ -75,13 +79,17 @@ def generate_rule_docs(rule_file: str, output_file: str):
     title = rule.get("title", "Untitled")
     description = rule.get("description", "No description provided")
     remediation = rule.get("remediation", "No remediation provided")
+    ruleNumber = rule.get("rulenumber", "no-number")
+    ruleName = rule.get("rulename", "untitled")
+
     del rule["title"]
     del rule["description"]
     del rule["remediation"]
     del rule["custom"]
 
     with open(output_file, "w") as f:
-        f.write(f"# {title}\n")
+        f.write(f"# {ruleNumber} - {ruleName}\n")
+        f.write(f"## {title}\n")
         f.write(f"{remediation}\n")
         f.write(f"## Metadata\n")
         f.write(f"```yaml\n")

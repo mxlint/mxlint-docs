@@ -1,5 +1,7 @@
 # Domain Model
 
+
+
 ## Example
 
 ```yaml
