@@ -42,7 +42,6 @@ def parse(rule_file: str):
                 break
     raw_yaml = "\n".join(metadata_lines)
     metadata = yaml.load(raw_yaml, Loader=yaml.SafeLoader)
-    print(metadata)
     return metadata
 
 def generate_rules_docs(rules_dir: str, output_dir: str):
