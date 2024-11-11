@@ -8,6 +8,7 @@ nav:
     - pipeline-integration
     - mendix-documents
     - rules
+    - events
     - terminologies.md
     - code-of-conduct.md
     - about.md
