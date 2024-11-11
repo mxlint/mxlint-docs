@@ -16,20 +16,20 @@
 ### Quality Driven Development Initiative
 
 <video width="100%" controls>
-  <source src="../../assets/videos/2024-10-24-mx-meetup-part1.mp4.mp4" type="video/mp4">
+  <source src="../../assets/videos/2024-10-24-mx-meetup-part1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ### ABN AMRO shares a story about balancing low-code, low-ops & low risk and why they support the MxLint initiative
 
 <video width="100%" controls>
-  <source src="../../assets/videos/2024-10-24-mx-meetup-part2.mp4.mp4" type="video/mp4">
+  <source src="../../assets/videos/2024-10-24-mx-meetup-part2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ### MxLint
 
 <video width="100%" controls>
-  <source src="../../assets/videos/2024-10-24-mx-meetup-part3.mp4.mp4" type="video/mp4">
+  <source src="../../assets/videos/2024-10-24-mx-meetup-part3.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
