@@ -1,6 +1,6 @@
 # Update CLI
 
-Often mxlint-cli is updated before the extension is refreshed to the latest mxlint-cli version. 
+Often mxlint-cli is updated before the extension is refreshed to the latest mxlint-cli version. When the mxlint-extension is started, it ensures there's an mxlint-cli executable called `mxlint-local` present under `$project_dir/.mendix-cache`. If it's absent, the default version is downloaded from Github.
 
 ## Override
 
