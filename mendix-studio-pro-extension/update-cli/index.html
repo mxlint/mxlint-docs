@@ -574,6 +574,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Update CLI
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -583,6 +594,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#override" class="md-nav__link">
+    <span class="md-ellipsis">
+      Override
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1581,6 +1629,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#override" class="md-nav__link">
+    <span class="md-ellipsis">
+      Override
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1598,13 +1672,17 @@
 
 
 <h1 id="update-cli">Update CLI</h1>
-<p>Often mxlint-cli is updated before the extension is refreshed to the latest mxlint-cli version. You can use the latest version (assuming it's compatible) with the extension by following the steps:</p>
+<p>Often mxlint-cli is updated before the extension is refreshed to the latest mxlint-cli version. </p>
+<h2 id="override">Override</h2>
+<p>You can use the latest version (assuming it's compatible) with the extension by following the steps:</p>
 <ul>
 <li>Download the CLI binary from https://github.com/mxlint/mxlint-cli/releases (You need the one with name that ends with windows-amd64.exe for windows)</li>
 <li>You will find a file with name <code>mxlint-local.exe</code> in <code>$project_dir/.mendix-cache/</code> directory. Delete <code>mxlint-local.exe</code></li>
 <li>Copy or move the new mxlint-cli to <code>$project_dir/.mendix-cache</code>. Make sure it's called <code>mxlint-local.exe</code></li>
 </ul>
 <p>No need to restart Mendix studio pro</p>
+<h2 id="reset">Reset</h2>
+<p>If the new version of mxlint-cli is not compatible with your extension, you can reset it by deleting <code>$project_dir/.mendix-cache/mxlint-local.exe</code>. After that restart Mendix studio pro. The old mxlint-cli version will be automatically downloaded again.</p>
 
 
 
