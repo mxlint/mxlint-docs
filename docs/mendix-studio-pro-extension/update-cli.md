@@ -14,4 +14,4 @@ No need to restart Mendix studio pro
 
 ## Reset
 
-If the new version of mxlint-cli is not compatible with your extension, you can reset it by deleting `$project_dir/.mendix-cache/mxlint-local.exe`. After that restart Mendix studio pro. The old mxlint-cli version will be automatically downloaded again.
+If the new version of mxlint-cli is not compatible with your extension, you can reset it by deleting `$project_dir/.mendix-cache/mxlint-local.exe`. After that restart Mendix studio pro. The default mxlint-cli version will be automatically downloaded again.
