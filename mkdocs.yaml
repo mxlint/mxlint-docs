@@ -1,6 +1,6 @@
 site_name: MxLint
-repo_url: https://github.com/mxlint/mxlint-docs
-repo_name: mxlint/mxlint-docs
+repo_url: https://github.com/mxlint/mxlint-cli
+repo_name: mxlint/mxlint-cli
 theme:
   name: 'material'
   logo: assets/mxlint-logo.png
